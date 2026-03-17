@@ -1,6 +1,6 @@
 # Planning Poker
 
-[![CI](https://github.com/LikeClockworkOrg/Planning-Poker/actions/workflows/ci.yml/badge.svg)](https://github.com/LikeClockworkOrg/Planning-Poker/actions/workflows/ci.yml)
+[![Tests](https://github.com/LikeClockworkOrg/Planning-Poker/actions/workflows/ci.yml/badge.svg)](https://github.com/LikeClockworkOrg/Planning-Poker/actions/workflows/ci.yml)
 
 Real-time planning poker app for agile teams. Create a room, share the code, and vote on story points together.
 
