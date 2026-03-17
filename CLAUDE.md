@@ -18,7 +18,10 @@ npm run build -w packages/server    # Build server
 docker compose up --build           # Full production stack (app + Redis)
 ```
 
-There are no tests or linting configured.
+```bash
+npm test              # Run all tests (Vitest)
+npm run test:watch    # Run tests in watch mode
+```
 
 ## Architecture
 

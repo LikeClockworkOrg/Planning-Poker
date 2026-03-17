@@ -111,10 +111,14 @@ The app exposes port 3000. Place behind nginx, Caddy, or similar for TLS and dom
 
 ## Quality checks
 
-There are no tests or linting configured yet. The current quality checks are:
+```bash
+npm test            # Run all tests (Vitest)
+npm run test:watch  # Run tests in watch mode
+npm run build       # Type checking via TypeScript compilation across all packages
+```
 
-- **Type checking**: `npm run build` — TypeScript compilation catches type errors across all packages
-- **Vue type checking**: `vue-tsc --noEmit` runs as part of the client build
+- **Tests**: Vitest test suite covering server business logic (room management, voting, vote masking, result calculation) and shared constants
+- **Type checking**: `tsc` for server/shared, `vue-tsc` for client (runs as part of `npm run build`)
 
 ## How it works
 
