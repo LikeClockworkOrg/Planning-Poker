@@ -1,0 +1,23 @@
+{
+  "name": "planning-poker",
+  "private": true,
+  "workspaces": [
+    "packages/shared",
+    "packages/server",
+    "packages/client"
+  ],
+  "scripts": {
+    "build": "npm run build -w packages/shared && npm run build -w packages/client && npm run build -w packages/server",
+    "dev:server": "npm run dev -w packages/server",
+    "dev:client": "npm run dev -w packages/client",
+    "dev": "docker compose -f docker-compose.dev.yml up -d && concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:stop": "docker compose -f docker-compose.dev.yml down",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "typescript": "^5.7.3",
+    "vitest": "^4.1.0"
+  }
+}
